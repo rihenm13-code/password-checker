@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔐 Password Strength Checker</h1>
+            <p class="subtitle">Check your password strength and get recommendations</p>
+        </header>
+
+        <main>
+            <div class="card">
+                <div class="input-group">
+                    <label for="password">Enter Password:</label>
+                    <div class="password-input-wrapper">
+                        <input 
+                            type="password" 
+                            id="password" 
+                            placeholder="Type your password here..." 
+                            autocomplete="off"
+                        >
+                        <button id="togglePassword" class="toggle-btn">👁️</button>
+                    </div>
+                </div>
+
+                <div class="strength-meter">
+                    <div class="meter-bar">
+                        <div id="strengthBar" class="meter-fill"></div>
+                    </div>
+                    <div class="strength-text">
+                        <span id="strengthLevel">Enter a password</span>
+                        <span id="strengthPercentage">(0%)</span>
+                    </div>
+                </div>
+
+                <div id="feedback" class="feedback-container"></div>
+
+                <div class="button-group">
+                    <button id="generateBtn" class="btn btn-generate">Generate Strong Password</button>
+                    <button id="copyBtn" class="btn btn-copy" style="display:none;">Copy Password</button>
+                </div>
+
+                <div id="generatedPassword" class="generated-password" style="display:none;">
+                    <p>Generated Password:</p>
+                    <div class="password-display">
+                        <span id="generatedText"></span>
+                        <button id="copyGenerated" class="copy-icon">📋</button>
+                    </div>
+                </div>
+            </div>
+
+            <section class="info-section">
+                <h2>Password Security Tips</h2>
+                <ul>
+                    <li><strong>Length:</strong> Use at least 12-16 characters for better security</li>
+                    <li><strong>Mix Characters:</strong> Combine uppercase, lowercase, numbers, and symbols</li>
+                    <li><strong>Avoid Patterns:</strong> Don't use sequential characters (123, abc) or repeating characters</li>
+                    <li><strong>Be Unique:</strong> Use different passwords for different accounts</li>
+                    <li><strong>Avoid Personal Info:</strong> Don't include names, birthdays, or common words</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Password Strength Checker | Secure Your Accounts</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

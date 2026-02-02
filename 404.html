@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Password Strength Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .error-container {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .error-code {
+            font-size: 5rem;
+            font-weight: 700;
+            color: white;
+            margin: 0;
+        }
+        .error-message {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 10px 0 30px;
+        }
+        .error-link {
+            display: inline-block;
+            background: white;
+            color: #6366f1;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .error-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔐 Password Strength Checker</h1>
+        </header>
+        <div class="error-container">
+            <h2 class="error-code">404</h2>
+            <p class="error-message">Page Not Found</p>
+            <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 30px;">The page you're looking for doesn't exist.</p>
+            <a href="/" class="error-link">← Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
